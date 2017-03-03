@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 //my references
 using System.Xml;
 using System.IO;
-using System.Text;
+//using System.Text;
 using System.Diagnostics;
+using net.jsBeautifier;
 
 namespace JSact
 {
@@ -90,12 +91,15 @@ namespace JSact
             strFolder = strUSPath.Substring(0,strUSPath.LastIndexOf("\\"));
             strFolder = strFolder + "\\Results";
             DirectoryInfo di = Directory.CreateDirectory(strFolder);
-            char[] buffarray = strBuff.ToCharArray();
+            char[] buffarray = new char[10000]; // strBuff.ToCharArray();
             fs=File.Open(di.FullName+"\\Results.js", FileMode.Append);
-            
-           if (strBuff.Length >0)
+
+            strBuff = RemoveCData(strBuff);
+
+            if (strBuff.Length >0)
             {
-                //fs.Seek(scriptstartpos, SeekOrigin.Begin);
+                buffarray = strBuff.ToCharArray();
+
                 foreach (char ch in buffarray)
                 {
                     Debug.Write(ch);
@@ -129,7 +133,21 @@ namespace JSact
           
 
             fs.Close();
+
+            JsBeautifier jsb = new JsBeautifier();
+            //jsb.
+            
            
+        }
+
+        private string RemoveCData(string strXMLWithCData)
+        {
+            string strCleaned = String.Empty;
+
+            strCleaned = strXMLWithCData.Replace("<script><![CDATA[", string.Empty);
+            strCleaned = strCleaned.Replace("]]></script>", string.Empty);
+            
+            return strCleaned;
         }
     }
 }

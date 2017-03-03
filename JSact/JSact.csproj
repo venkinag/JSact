@@ -80,6 +80,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JSBeautifier\source\jsBeautifier.net\jsBeautifier.net.csproj">
+      <Project>{7206e369-3433-44a5-b10e-60fa68b8ea34}</Project>
+      <Name>jsBeautifier.net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -54,7 +54,6 @@
             this.grpUpdateSet.Size = new System.Drawing.Size(472, 222);
             this.grpUpdateSet.TabIndex = 5;
             this.grpUpdateSet.TabStop = false;
-            this.grpUpdateSet.UseWaitCursor = true;
             // 
             // btnExit
             // 
@@ -65,7 +64,6 @@
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.UseWaitCursor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnGetJS
@@ -76,7 +74,6 @@
             this.btnGetJS.TabIndex = 10;
             this.btnGetJS.Text = "Get &JS";
             this.btnGetJS.UseVisualStyleBackColor = true;
-            this.btnGetJS.UseWaitCursor = true;
             this.btnGetJS.Click += new System.EventHandler(this.btnGetJS_Click);
             // 
             // lblFiles
@@ -87,7 +84,6 @@
             this.lblFiles.Size = new System.Drawing.Size(28, 13);
             this.lblFiles.TabIndex = 9;
             this.lblFiles.Text = "Files";
-            this.lblFiles.UseWaitCursor = true;
             // 
             // lbxFileList
             // 
@@ -96,7 +92,6 @@
             this.lbxFileList.Name = "lbxFileList";
             this.lbxFileList.Size = new System.Drawing.Size(331, 95);
             this.lbxFileList.TabIndex = 8;
-            this.lbxFileList.UseWaitCursor = true;
             // 
             // lblUSPath
             // 
@@ -106,7 +101,6 @@
             this.lblUSPath.Size = new System.Drawing.Size(97, 13);
             this.lblUSPath.TabIndex = 7;
             this.lblUSPath.Text = "Update Set(s) Path";
-            this.lblUSPath.UseWaitCursor = true;
             // 
             // txtUSPath
             // 
@@ -114,7 +108,6 @@
             this.txtUSPath.Name = "txtUSPath";
             this.txtUSPath.Size = new System.Drawing.Size(331, 20);
             this.txtUSPath.TabIndex = 6;
-            this.txtUSPath.UseWaitCursor = true;
             // 
             // btnBrowse
             // 
@@ -124,7 +117,6 @@
             this.btnBrowse.TabIndex = 5;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.UseWaitCursor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // Form1
@@ -141,6 +133,7 @@
             this.grpUpdateSet.PerformLayout();
             this.ResumeLayout(false);
             this.AcceptButton = this.btnGetJS;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
 
         }
 
